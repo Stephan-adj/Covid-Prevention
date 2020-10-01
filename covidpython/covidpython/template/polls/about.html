@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+	{% for post in posts %}		
+		<p class="article-content">Ce projet a été une occasion pour nous d'apprendre à utiliser le framework django. 
+		L'intéropérabilité et la connaissance de plusieurs language de développement ont été essentielles.</p>
+	{% endfor %}
+	<img width="300px" src="https://www.devinci.fr/wordpress/wp-content/uploads/2013/07/Logo-esilv.jpg">
+	<h1  style="position: absolute; bottom: 5px; right : 650px;">About Page!</h1>
+	<H1>Notre équipe :</H1>
+<div class="col-md-5">BONIOL Maxence : En charge du sondage des besoins.</div>
+<div class="col-md-5">DREVET Lucie : En charge de l'enregistrement des utilisateurs.</div>
+<div class="col-md-5">EVY Lucas : En charge de l'enregistrement des utilisateurs.</div>
+<div class="col-md-5">LIAO Sébastien : En charge de l'enrgistrement de produits.</div>
+<div class="col-md-5">NEBOUT Alexandra : En charge du formulaire des besoins.</div>
+<div class="col-md-5">BOZZACHI WIlliam : En charge du formulaire des besoins.</div>
+<div class="col-md-9">ADJARIAN Stéphan : En charge de l'interface, du login des utilisateurs et de réunir les différentes parties en commun.</div>
+
+{% endblock content %}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<html>
+<head>
+<title>Formulaire</title>
+</head>
+<body>
+
+<H1>Formulaire pour vos besoins particuliers</H1>
+<P>
+Par le biais de ce formulaire, vous pouvez nous faire parts de vos besoins particuliers durant
+cette période particulière. Ce formulaire s'adresse aux personnes souffrant d'un handicap ou d'une maladie
+chronique ne pouvant pas se plier intégralement aux règles de confinement strict. Vous pouvez aussi nous détailler
+vos allergies afin que vos apniers repas soient adaptés à votre régime alimentaie.
+</P>
+<HR>
+
+
+<form method="POST" action="{% url 'profile' %}">
+	{% csrf_token %}
+<H2>Questionnaire</H2>
+1) Avez-vous des allergies ?
+<input type="radio" name="choix" value="oui" checked> Oui
+<input type="radio" name="choix" value="non"> Non
+<P>
+2) Souffrez-vous d'une maladie chronique ?
+<input type="radio" name="choix" value="oui" checked> Oui
+<input type="radio" name="choix" value="non"> Non
+<P>
+3) Avez-vous besoin d'un auxiliaire de vie à mi-temps ?
+<input type="radio" name="choix" value="oui" checked> Oui
+<input type="radio" name="choix" value="non"> Non
+<P>
+4) Quelle est votre allergie ?
+ <select name="couleur">
+ <option selected>noix
+ <option>fruits
+ <option>légumes
+ <option>viandes
+ <option>arachide
+ <option>lactose
+ <option>gluten
+ <option>fruits à coques 
+ </select>
+<P>
+5) Si vous avez répondu à la 2), veuillez nous donner plus de précisions 
+<input name="message" size=60,5>
+<P>
+5) Si vous avez répondu à la 3), veuillez nous expliquer pourquoi
+<input name="message" size=60,5>
+<P>
+Cliquez sur <input type="submit" value="Valider"> pour soumettre votre formulaire,
+sinon <input type="reset" value="Annuler">
+</form>
+
+</body>
+</html>
+
+{% endblock %}

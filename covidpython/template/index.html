@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<section class="hero is-info is-fullheight">
+  <div class="hero-body">
+	<div class="containter">
+		<h1>Inscription</h1>
+	</div>
+	<div class="container">
+		<form method="post">
+	{% csrf_token %}
+		{{ form.as_p }}
+			<button type="submit">OK</button>
+	</form>
+
+	</div>
+  </div>
+</section>
+
+{% endblock %}

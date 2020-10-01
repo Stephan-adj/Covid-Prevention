@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="article-title">{{ object.title }}</h2>
+<p class="article-content">{{ object.content }}</p>
+<div class="media-body">
+	<div class="article-metadata">
+		<a class="title has-text-centered" href="{% url 'profile' %}">{{ object.email }}</a>
+		<small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+    </div>
+</div>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc7Gn0efHQsNRypyODx6yGcMN4cXRdjZ7LjUVNMm6_2mKH7Ag/viewform?embedded=true" class="hero is-fullheight" width="100%"></iframe>	
+<button type="button" class="btn btn-primary btn-lg btn-block" href="{% url 'formulaire' %}" >Formulaire spéciale allergie</button>
+<button type="button" class="btn btn-secondary btn-lg btn-block">Formulaire végétarien</button>
+<button type="button" class="btn btn-tertiary btn-lg btn-block">Formulaire végan</button>
+<button type="button" class="btn btn-quaternary btn-lg btn-block">Formulaire hallal</button>
+<button type="button" class="btn btn-quinary btn-lg btn-block">Formulaire pour enfant en bas-âge</button>
+{% endblock content %}

@@ -1,0 +1,35 @@
+<!-- profile.html -->
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<section class="section">
+
+  <div class="container">
+    <h1 class="title has-text-centered">
+      Profile
+    </h1>
+
+    <div class="columns">
+      <div class="column is-offset-2 is-8">
+        <h2 class="subtitle is-size-3">
+          Welcome {{ request.user.email }}
+        </h2>
+
+        <h3 class="subtitle">Personal informations :</h3>
+        <div class="content">
+			Adress : {{ request.user.adresse }}
+        </div>
+        <div class="content">
+			Telephone number : +33{{ request.user.numero_telephone }}
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<html>
+<head>
+<title>Formulaire</title>
+</head>
+<body>
+
+<H1>Formulaire pour vos besoins particuliers</H1>
+<P>
+Par le biais de ce formulaire, vous pouvez nous faire parts de vos besoins particuliers durant
+cette période particulière. Ce formulaire s'adresse aux personnes souffrant d'un handicap ou d'une maladie
+chronique ne pouvant pas se plier intégralement aux règles de confinement strict. Vous pouvez aussi nous détailler
+vos allergies afin que vos apniers repas soient adaptés à votre régime alimentaie.
+</P>
+<HR>
+
+<div class="containter">
+    <h1>Definir vos besoins particuliers</h1>
+</div>
+<div class="container">
+    <form method="post">
+{% csrf_token %}
+    {{ form.as_p }}
+        <button type="submit">OK</button>
+</form>
+
+</div>
+</body>
+</html>
+
+{% endblock %}
